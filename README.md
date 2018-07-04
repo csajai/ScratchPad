@@ -33,6 +33,13 @@ GET url: http://localhost:8081/api/customers
 
 GET url with ID: http://localhost:8081/api/customers/2
 
+POST url: http://localhost:8081/api/customers
+
+PUT url: http://localhost:8081/api/customers/2
+
+DELETE url: http://localhost:8081/api/customers/2
+
+
 ## Customer data used for the exercise:
 
  {
@@ -62,8 +69,6 @@ GET url with ID: http://localhost:8081/api/customers/2
     }
   }
 
-
-POST url: http://localhost:8081/api/customers
 
 ## Sample POST request:
 
@@ -98,8 +103,6 @@ POST url: http://localhost:8081/api/customers
   }
 
 
-PUT url: http://localhost:8081/api/customers/2
-
 ## Sample  PUT request:
 
 {
@@ -116,6 +119,4 @@ PUT url: http://localhost:8081/api/customers/2
     }
   }
 
-
-DELETE url: http://localhost:8081/api/customers/2
 
