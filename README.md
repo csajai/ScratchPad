@@ -1,11 +1,11 @@
 # Deloitte Customer API
 
-Preface:
+## Preface:
 
 The Deloitte Customer API is a REST based service built in Mulesoft that will cater the needs of an organization for a customer portal.
 It can be accessed as a mobile application with a provision to fetch customer details and update them. This enables the customer representatives quick and easy access to customer data on their hand-held devices.
 
-Resource/Methods:
+## Resource/Methods:
 
 The Deloitte Customer API can be accessed through a base path /api/* followed by a resource 'customers'. It supports the following operations.
  -GET (Fetch customer data)
@@ -13,7 +13,7 @@ The Deloitte Customer API can be accessed through a base path /api/* followed by
  -PUT (Update Customer data)
  -DELETE (Delete Customer data)
  
-Parameters List:
+## Parameters List:
 
 The ID of a customer is used as a key attribute that uniquely identifies a customer. This parameter is used with some of the operations.
  
@@ -27,13 +27,13 @@ PUT: customers/{ID} - Updates the details of a specific customer that matches th
 
 DELETE: customers/{ID} - Deletes the details of a specific customer that matches the ID passed as a uri param. Does not include any country or ID check validation now for this exercise.
 
-Sample Request:
+## Sample Request:
 
 GET url: http://localhost:8081/api/customers
 
 GET url with ID: http://localhost:8081/api/customers/2
 
-Customer data used for the exercise:
+## Customer data used for the exercise:
 
  {
     "ID": 1,
@@ -62,9 +62,10 @@ Customer data used for the exercise:
     }
   }
 
+
 POST url: http://localhost:8081/api/customers
 
-Sample request:
+## Sample POST request:
 
 {
     "ID": 2,
@@ -80,7 +81,7 @@ Sample request:
     }
   }
   
-Sample request for a Non-Australian Customer:
+## Sample POST request for a Non-Australian Customer:
 
 {
     "ID": 3,
@@ -96,9 +97,10 @@ Sample request for a Non-Australian Customer:
     }
   }
 
+
 PUT url: http://localhost:8081/api/customers/2
 
-Sample request:
+## Sample  PUT request:
 
 {
     "ID": 2,
@@ -113,6 +115,7 @@ Sample request:
       "country": "Australia"
     }
   }
+
 
 DELETE url: http://localhost:8081/api/customers/2
 
