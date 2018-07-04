@@ -1,0 +1,57 @@
+#%RAML 1.0
+version: v1
+baseUri: https://mocksvc.mulesoft.com/mocks/32678010-46b3-4d9b-a270-5710dd0b90b8 # 
+title: Deloitte Customer API
+
+types:
+  DeloitteCustomer: !include exchange_modules/9b2262b0-9d2a-4fbb-9daf-1f73bd43e397/deloittecustomerdatatype/1.0.2/DeloitteCustomerDataType.raml
+
+/customers:
+  get:
+    queryParameters: 
+      ID:
+        required: false
+    responses: 
+      200:
+        body:
+          application/json:
+            type: DeloitteCustomer[]
+            example: !include exchange_modules/9b2262b0-9d2a-4fbb-9daf-1f73bd43e397/deloittecustomerexample/1.0.2/DeloitteCustomerExample.raml
+  post:
+    body: 
+      application/json:
+        type: DeloitteCustomer
+        example: !include examples/DeloitteCustomerIDExample.raml
+    responses: 
+      201:
+        body: 
+          application/json:
+            example:
+              message: Customer added to the system
+  /{ID}:
+    get:
+     responses: 
+      200:
+        body:
+          application/json:
+            type: DeloitteCustomer
+            example: !include examples/DeloitteCustomerExample.raml
+    
+    delete:
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                message: Customer deleted in the system
+    put:
+      body:
+        application/json:
+          type: DeloitteCustomer
+          example: !include examples/DeloitteCustomerIDExample.raml
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                message: Customer updated in the system
